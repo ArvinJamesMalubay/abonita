@@ -39,7 +39,7 @@ const upload = multer({
 });
 
 // Apply auth middleware to all routes
-router.use(authMiddleware);
+router.use(authMiddleware.authenticateJWT);
 
 // Profile routes
 router.put('/users/:id/profile', upload.single('profileImage'), userController.updateProfile);

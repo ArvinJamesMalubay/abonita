@@ -30,23 +30,22 @@ const User = sequelize.define('User', {
   },
   fullName: {
     type: DataTypes.STRING,
-    allowNull: true,
-    field: 'full_name'
-  },
-  phone: {
-    type: DataTypes.STRING,
     allowNull: true
   },
-  profileImage: {
-    type: DataTypes.STRING,
-    allowNull: true,
-    field: 'profile_image'
-  },
-  settings: {
-    type: DataTypes.JSON,
-    allowNull: true,
-    defaultValue: null
-  },
+  // phone: {
+  //   type: DataTypes.STRING,
+  //   allowNull: true
+  // },
+  // profileImage: {
+  //   type: DataTypes.STRING,
+  //   allowNull: true,
+  //   field: 'profile_image'
+  // },
+  // settings: {
+  //   type: DataTypes.JSON,
+  // //   allowNull: true,
+  // //   defaultValue: null
+  // },
   role: {
     type: DataTypes.ENUM('admin', 'user'),
     defaultValue: 'user'
@@ -56,11 +55,11 @@ const User = sequelize.define('User', {
     defaultValue: true,
     field: 'is_active'
   },
-  lastLogin: {
-    type: DataTypes.DATE,
-    allowNull: true,
-    field: 'last_login'
-  },
+  // lastLogin: {
+  //   type: DataTypes.DATE,
+  //   allowNull: true,
+  //   field: 'last_login'
+  // },
   createdAt: {
     type: DataTypes.DATE,
     field: 'created_at'
